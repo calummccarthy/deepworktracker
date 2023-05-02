@@ -41,3 +41,9 @@ button {
     background-color: #f7f70e;
     padding: 20px;
 }
+
+li {
+    color: white;
+    font-size: 26px;
+    padding: 15px 0px;
+}
