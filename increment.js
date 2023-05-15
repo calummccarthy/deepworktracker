@@ -1,3 +1,5 @@
+let dates = []
+
 function add(hours) {
     const elem = document.getElementById("number").innerHTML;
     var hrs = parseFloat(hours);
@@ -8,8 +10,17 @@ function add(hours) {
 var today = new Date();
 var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
 
+
 function create(time) {
-    var list = document.createElement('li');
-    list.textContent = date +' ' + time;
-    document.body.appendChild(list);
+    var list = date + ' ' + time;
+    dates.push(list);
+    console.log(dates);
+}
+
+function load() {
+    for (let i=0; i < dates.length; i++) {
+        let li = document.createElement('li')
+        li.innerHTML = (dates[0]);
+        document.body.appendChild(li);
+    }
 }

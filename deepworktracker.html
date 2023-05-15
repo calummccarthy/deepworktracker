@@ -4,9 +4,15 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="styles.css" />
-        <link href="increment.js" />
+        <link href="script.js" />
         <title>Deep Work Tracker</title>
-        <script src="increment.js" defer></script>
+        <script src="increment.js">
+        for (let i=0; i < dates.length; i++) {
+        let li = document.createElement('li')
+        li.innerHTML = (dates[0]);
+        document.body.appendChild(li);
+    }
+        </script>
     </head>
     <body>
         <h1>Deep Work Tracker</h1>
@@ -16,8 +22,9 @@
         <button onclick="add(1.5); create('1.5HRs')">1.5HR</button>
         <button onclick="add(2.0); create('2HRs')">2HR</button>
         <section>
-            <ul>
-            </ul>
+            <button id="btn" onclick="load()">
+                PREV HRS WORKED
+            </button>
         </section>
     </body>
 </html>
