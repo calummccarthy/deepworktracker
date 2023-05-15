@@ -36,6 +36,6 @@ function avg() {
     average = sum / dates.length;
 
     let btn1 = document.getElementById("average");
-    btn1.innerHTML = average
+    btn1.innerHTML = average;
 
 }
