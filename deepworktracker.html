@@ -18,16 +18,19 @@
         <h1>Deep Work Tracker</h1>
         <h2>Total Hours</h2>
         <p id="number">0</p>
-        <button onclick="add(1.0); create('1.0HR')">1HR</button>
-        <button onclick="add(1.5); create('1.5HR')">1.5HR</button>
-        <button onclick="add(2.0); create('2.0HR')">2HR</button>
-        <section>
-            <button id="loaded" onclick="load()">
-                PREV HRS WORKED
-            </button>
+        <section id="avg_section">
             <button id="average" onclick="avg()">
                 AVERAGE
             </button>
+        </section>
+        <button onclick="add(1.0); create('1.0HR')">1HR</button>
+        <button onclick="add(1.5); create('1.5HR')">1.5HR</button>
+        <button onclick="add(2.0); create('2.0HR')">2HR</button>
+        <section id="'log_section">
+            <p>
+                Logged Hours:
+            </p>
+            <ul id="load_list"></ul>
         </section>
     </body>
 </html>

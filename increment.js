@@ -14,14 +14,19 @@ var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
 function create(time) {
     var list = date + '  :  ' + time;
     dates.push(list);
+    let li = document.createElement('li');
+    li.setAttribute("class", "prev_hrs");
+    li.innerHTML = (list);
+    document.getElementById('load_list').appendChild(li);
+
 }
 
 function load() {
     for (let i=0; i < dates.length; i++) {
-        let li = document.createElement('li')
-        li.setAttribute("class", "prev_hrs")
+        let li = document.createElement('li');
+        li.setAttribute("class", "prev_hrs");
         li.innerHTML = (dates[i]);
-        document.body.appendChild(li);
+        document.getElementById('load_list').appendChild(li);
     }
 }
 

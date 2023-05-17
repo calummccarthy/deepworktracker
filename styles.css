@@ -53,14 +53,25 @@ li {
 }
 
 #average {
-    position: relative;
-    bottom: 325px;
-    left: 120px
+    text-align: center;
 }
 
 #loaded {
     position: relative;
-    left: 100px
+    bottom: 40px
+}
+
+#avg_section {
+    height: 130px
+}
+
+#log_section {
+    height: 130px
+}
+
+p {
+    padding: 20px;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
 @media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
