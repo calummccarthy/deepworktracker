@@ -15,6 +15,12 @@ h1 {
     text-align: left;
 }
 
+li {
+    color: white;
+    font-size: 26px;
+    padding: 15px 0px;
+}
+
 #navbar {
     background-color: #F7F70E;
     height: 60px;
@@ -35,76 +41,33 @@ h1 {
     cursor: pointer;
 }
 
-.nav-link {
+#header-link, .nav-link {
     text-decoration: none;
     color: black;
 }
 
 h2 {
-    margin-top: 150px;
-    font-size: 38px;
     color: white;
+    font-size: 45px;
+    padding: 25px;
 }
 
-body p {
-    font-size: 50px;
-    color: white;
-    margin: 30px;
+#main-section > p {
+    padding: 25px 20px;
+    color: ghostwhite;
+    font-size: 20px;
 }
 
-#number {
-    font-size: 50px;
-    margin: 35px 0px;
-    color: white; 
-}
-
-button {
-    font-size: 30px;
-    margin: 50px 20px;
-    cursor: pointer;
-    background-color: #f7f70e;
-    padding: 20px;
-}
-
-li {
-    color: white;
-    font-size: 26px;
-    padding: 15px 0px;
-}
-
-.prev_hrs {
-    list-style: none;
-}
-
-#average {
-    text-align: center;
-}
-
-#loaded {
-    position: relative;
-    bottom: 40px
-}
-
-#avg_section {
-    height: 130px
-}
-
-#log_section {
-    height: 130px
-}
-
-p {
-    padding: 20px;
-    font-family: 'Trebuchet MS', sans-serif;
-}
 
 footer {
     padding: 20px;
     margin-top: 100px;
     background-color: black;
+    margin-top: 220px;
 }
 
 .footer-text {
+    color: white;
     font-size: 24px;
     padding: 10px 0px;
     margin: 0px;
