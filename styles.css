@@ -1,3 +1,8 @@
+:root {
+    --black: #2B2B26;
+    --yellow: #f7f70e;
+}
+
 * {
     text-align: center;
     font-family: 'Trebuchet MS', sans-serif;
@@ -7,7 +12,7 @@
 }
 
 body {
-    background-color: #2B2B26;
+    background-color: var(--black);
 }
 
 h1 {
@@ -16,7 +21,7 @@ h1 {
 }
 
 #navbar {
-    background-color: #F7F70E;
+    background-color: var(--yellow);
     height: 60px;
 }
 
@@ -29,7 +34,7 @@ h1 {
 }
 
 #nav-links > li {
-    color: black;
+    color: var(--black);
     font-family: 'Trebuchet MS', sans-serif;
     padding: 14px 20px;
     cursor: pointer;
@@ -37,7 +42,7 @@ h1 {
 
 .nav-link {
     text-decoration: none;
-    color: black;
+    color: var(--black);
 }
 
 h2 {
@@ -62,7 +67,7 @@ button {
     font-size: 30px;
     margin: 50px 20px;
     cursor: pointer;
-    background-color: #f7f70e;
+    background-color: var(--yellow);
     padding: 20px;
 }
 
@@ -91,6 +96,16 @@ li {
 
 #log_section {
     height: 130px
+}
+
+#timer_section {
+    position: relative;
+    bottom: 597px;
+    right: 370px;
+}
+
+#reset_btn {
+    margin-top: 0;
 }
 
 p {

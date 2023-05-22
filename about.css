@@ -1,3 +1,8 @@
+:root {
+    --black: #2b2b26;
+    --yellow: #f7f70e;
+}
+
 * {
     text-align: center;
     font-family: 'Trebuchet MS', sans-serif;
@@ -7,7 +12,7 @@
 }
 
 body {
-    background-color: #2B2B26;
+    background-color: var(--black);
 }
 
 h1 {
@@ -22,7 +27,7 @@ li {
 }
 
 #navbar {
-    background-color: #F7F70E;
+    background-color: var(--yellow);
     height: 60px;
 }
 
@@ -35,7 +40,7 @@ li {
 }
 
 #nav-links > li {
-    color: black;
+    color: var(--black);
     font-family: 'Trebuchet MS', sans-serif;
     padding: 14px 20px;
     cursor: pointer;
@@ -43,7 +48,7 @@ li {
 
 #header-link, .nav-link {
     text-decoration: none;
-    color: black;
+    color: var(--black);
 }
 
 h2 {
@@ -53,7 +58,7 @@ h2 {
 }
 
 #main-section > p {
-    padding: 25px 20px;
+    padding: 25px 50px;
     color: ghostwhite;
     font-size: 20px;
 }
