@@ -16,8 +16,19 @@ body {
 }
 
 h1 {
-    padding: 15px;
     text-align: left;
+}
+
+#nav-container {
+    display: flex;
+}
+
+.nav-box-1 {
+    flex-grow: 1;
+}
+
+.nav-box-2 {
+    align-items: center;
 }
 
 #navbar {
@@ -25,29 +36,46 @@ h1 {
     height: 60px;
 }
 
-#nav-links {
-    position: relative;
-    list-style: none;
-    display: inline-flex;
-    bottom: 57px;
-    left: 340px;
-}
-
-#nav-links > li {
+.nav-links {
     color: var(--black);
     font-family: 'Trebuchet MS', sans-serif;
+    font-size: 25px;
     padding: 14px 20px;
     cursor: pointer;
 }
 
 .nav-link {
     text-decoration: none;
-    color: var(--black);
+    color: black;
+}
+
+.container-1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.container-2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.c-1-box-1 {
+    order: 2;
+}
+
+.c-1-box-2 {
+    order: 3;
+}
+
+.c-1-box-3 {
+    order: 1;
 }
 
 h2 {
     margin-top: 150px;
-    font-size: 38px;
+    font-size: 50px;
     color: white;
 }
 
@@ -58,9 +86,13 @@ body p {
 }
 
 #number {
-    font-size: 50px;
+    font-size: 70px;
     margin: 35px 0px;
     color: white; 
+}
+
+#logged-txt {
+    font-size: 40px;
 }
 
 button {
@@ -69,6 +101,7 @@ button {
     cursor: pointer;
     background-color: var(--yellow);
     padding: 20px;
+    border-radius: 25px;
 }
 
 li {
@@ -79,29 +112,6 @@ li {
 
 .prev_hrs {
     list-style: none;
-}
-
-#average {
-    text-align: center;
-}
-
-#loaded {
-    position: relative;
-    bottom: 40px
-}
-
-#avg_section {
-    height: 130px
-}
-
-#log_section {
-    height: 130px
-}
-
-#timer_section {
-    position: relative;
-    bottom: 597px;
-    right: 370px;
 }
 
 #reset_btn {

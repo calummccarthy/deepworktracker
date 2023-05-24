@@ -26,17 +26,30 @@ li {
     padding: 15px 0px;
 }
 
+#nav-container {
+    display: flex;
+}
+
+.nav-box-1 {
+    flex-grow: 1;
+}
+
+.nav-box-2 {
+    align-items: center;
+}
+
+
 #navbar {
     background-color: var(--yellow);
     height: 60px;
 }
 
-#nav-links {
-    position: relative;
-    list-style: none;
-    display: inline-flex;
-    bottom: 57px;
-    left: 340px;
+.nav-links {
+    color: var(--black);
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    padding: 14px 20px;
+    cursor: pointer;
 }
 
 #nav-links > li {
@@ -61,6 +74,34 @@ h2 {
     padding: 25px 50px;
     color: ghostwhite;
     font-size: 20px;
+}
+
+label {
+    color:#f7f70e;
+    font-size: 25px;
+    padding: 30px 0px;
+}
+
+input {
+    margin: 30px 0px;
+    padding: 5px;
+    font-size: 2em;
+}
+
+textarea {
+    margin: 30px 0px;
+    height: 200px;
+    width: 500px;
+    font-size: 2em;
+}
+
+#send-btn {
+    font-size: 30px;
+    margin: 50px 20px;
+    cursor: pointer;
+    background-color: var(--yellow);
+    padding: 20px;
+    border-radius: 25px;
 }
 
 

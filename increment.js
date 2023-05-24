@@ -35,25 +35,63 @@ function avg() {
     btn1.innerHTML = average;
 }
 
-const time_el = document.getElementById("timer_num");
-const start = document.getElementById("start_btn")
-const stop = document.getElementById("pause_btn")
-const reset = document.getElementById("reset_btn")
+const timeDisplay = document.getElementById("timer_num");
+const startBtn = document.getElementById("start_btn");
+const pauseBtn = document.getElementById("pause_btn");
+const resetBtn = document.getElementById("reset_btn");
 
-let seconds = 7400;
-let interval = null;
+let startTime = 0;
+let elapsedTime = 0;
+let currentTime = 0;
+let paused = true;
+let intervalId;
+let hrs = 0;
+let mins = 0;
+let secs = 0;
 
-function timer() {
-    seconds++;
-
-    // Format our time
-    let hours = Math.floor(seconds / 3600);
-    let mins = Math.floor(seconds - (hrs / 3600) / 60);
-    let secs = seconds % 60;
-
-    if (secs < 10) secs = '0' + secs
+startBtn.addEventListener("click", () => {
+    if (paused == true) {
+        paused = false;
+        startTime = Date.now() - elapsedTime;
+        intervalId = setInterval(updateTime, 1000);
+    }
+});
+pauseBtn.addEventListener("click", () => {
+    if (!paused) 
+        paused = true;
+        elapsedTime = Date.now() - startTime;
+        clearInterval(intervalId);
+        startTime = 0;
+        elapsedTime = 0;
+        currentTime = 0;
+        paused = true;
+        intervalId;
+        hrs = 0;
+        mins = 0;
+        secs = 0;
+        timeDisplay.textContent = "00:00:00"
     
-    time_el.innerText = "$(hrs):$(mins):$(secs)";
-}
+});
+resetBtn.addEventListener("click", () => {
+    paused = true;
+    clearInterval(intervalId);
 
-timer()
+});
+
+function updateTime() {
+    elapsedTime = Date.now() - startTime;
+
+    secs = Math.floor((elapsedTime / 1000) % 60);
+    mins = Math.floor((elapsedTime / 1000 * 60) % 60);
+    hrs = Math.floor((elapsedTime / 1000 * 60 * 60) % 60);
+
+    timeDisplay.textContent = `${hrs}:${mins}:${secs}`;
+
+    secs = pad(secs);
+    mins = pad(mins);
+    hrs = pad(hrs);
+
+    function pad(unit){
+        return (("0") + unit).length > 2 ? unit: "0" + unit
+    }
+}
