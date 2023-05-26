@@ -42,6 +42,12 @@ h1 {
     font-size: 25px;
     padding: 14px 20px;
     cursor: pointer;
+
+    transition: transform 0.3s
+}
+
+.nav-links:hover {
+    transform: translateX(5px);
 }
 
 .nav-link {
@@ -102,6 +108,13 @@ button {
     background-color: var(--yellow);
     padding: 20px;
     border-radius: 25px;
+
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+button:hover {
+    transform: translateY(-10px);
+    background-color: white;
 }
 
 li {

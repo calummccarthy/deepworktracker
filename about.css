@@ -102,8 +102,17 @@ textarea {
     background-color: var(--yellow);
     padding: 20px;
     border-radius: 25px;
+
+    transition: transform 0.3s;
 }
 
+#send-btn:hover {
+    transform: translateY(-10px);
+}
+
+#ref-footer {
+    color: blue;
+}
 
 footer {
     padding: 20px;
