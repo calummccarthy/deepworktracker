@@ -92,3 +92,23 @@ function updateTime(){
         return (("0") + unit).length > 2 ? unit : "0" + unit;
     }
 }
+
+
+function jump(id) {
+    let notepad = document.getElementById(id);
+    notepad.classList.add('jump-animation');
+    setTimeout(function() {
+        notepad.classList.remove('jump-animation');
+    }, 2000)
+}
+
+function openBook() {
+    let bookOpened = document.getElementById('book-opened');
+    let bookClosed = document.getElementById('book-closed');
+    bookClosed.classList.add('vanish');
+    bookOpened.classList.remove('vanish');
+    setTimeout(function() {
+        bookClosed.classList.remove('vanish');
+        bookOpened.classList.add('vanish');
+    }, 2000)
+}
